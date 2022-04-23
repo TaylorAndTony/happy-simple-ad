@@ -78,10 +78,16 @@ html {
     text-align: center;
     border-bottom: 3px solid var(--bg);
     transition: all 0.5s ease;
+    animation: title-bar 3s linear infinite;
 }
 
-.center-title:hover {
-    border-bottom: 3px solid black;
+@keyframes title-bar {
+    0%, 10%, 90%, 100% {
+        border-bottom: 3px solid var(--bg);
+    }
+    50% {
+        border-bottom: 3px solid black;
+    }
 }
 
 .box .content {
