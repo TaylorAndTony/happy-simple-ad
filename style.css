@@ -1,8 +1,11 @@
 :root {
-    --bg: #e0e0e0;
-    --dark-bg: #dadada;
-    --dark-bg2: #c9c9c9;
+    --bg: #f7f4f0;
+    --box-bg: #fcf4e5;
+    --box-bg-shadow: #fad0bd;
+    --dark-bg: #ffebe2;
+    --dark-bg2: #fad0bd;
     --text: #545454;
+    --title: #c287b9;
     background: var(--bg);
 }
 
@@ -68,7 +71,7 @@ html {
 .center-title {
     font-size: 28px;
     font-weight: bold;
-    color: var(--text);
+    color: var(--title);
     margin-bottom: 30px;
     padding-bottom: 10px;
     width: fit-content;
@@ -86,7 +89,7 @@ html {
         border-bottom: 3px solid var(--bg);
     }
     50% {
-        border-bottom: 3px solid black;
+        border-bottom: 3px solid var(--title);
     }
 }
 
@@ -145,15 +148,15 @@ html {
 
 .image-box {
     border-radius: 16px;
-    background: #e0e0e0;
-    box-shadow: 5px 5px 10px #bebebe,
+    background: var(--box-bg);
+    box-shadow: 5px 5px 10px var(--box-bg-shadow),
         -5px -5px 10px #ffffff;
     padding-right: 60px;
     padding-left: 60px;
 }
 
 .image-box:hover {
-    box-shadow: 10px 10px 10px #bebebe,
+    box-shadow: 10px 10px 10px var(--box-bg-shadow),
         -10px -10px 10px #ffffff;
 }
 
@@ -181,15 +184,15 @@ html {
 
 .box {
     border-radius: 16px;
-    background: #e0e0e0;
-    box-shadow: 5px 5px 10px #bebebe,
+    background: var(--box-bg);
+    box-shadow: 5px 5px 10px var(--box-bg-shadow),
         -5px -5px 10px #ffffff;
     margin-bottom: 60px;
     transition: all 0.2s;
 }
 
 .box:hover {
-    box-shadow: 10px 10px 10px #bebebe,
+    box-shadow: 10px 10px 10px var(--box-bg-shadow),
         -10px -10px 10px #ffffff;
 }
 
