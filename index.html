@@ -7,128 +7,139 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="img/favicon.ico" />
+    <script src="Vue.js"></script>
     <title>乐道至简工作室</title>
 </head>
 
 <body>
-    <div id="top-bar">
-        <img src="img/logo.png" alt="乐道至简工作室" id="logo">
-        <span id="title">乐道至简工作室</span>
-    </div>
+    <div id="app">
 
-    <div id="content-wrapper">
-        <div id="content-view">
-            <!-- about us -->
-            <div class="center-title">关于我们</div>
-            <div class="box">
-                <div class="content">
-                    <p>乐道至简工作室，原名知恒图书编辑制作中心，
-                        创立于2014年12月，是一个由一群有想法、
-                        爱创作的学生组成的文字创作、文字排版、平面设计、视频制作团队。</p>
-                    <p>“知恒”是由工作室口号“知识即是永恒”简化而来的。
-                        自工作室成立以来，已经编辑和创作了大量作品。
-                        在2019年7月，会社还与其它机构达成合作，
-                        在众多领域交流学习，工作进展顺利。</p>
-                </div>
-            </div>
-            <!-- 作品 -->
-            <div class="center-title">我们的作品</div>
-            <!-- center the works -->
-            <div id="our-works-wrapper">
-                <!-- show works list -->
-                <!-- row 1 -->
-                <div id="our-works">
-                    <!-- works -->
-                    <div class="box works-display">
-                        <div class="works-title">《1517》系列</div>
-                        <div class="works-desc">
-                            大型英语校园小说，含有真实故事与科幻风支线剧情的高难度阅读理解。
-                        </div>
-                    </div>
-                    <div class="box works-display">
-                        <div class="works-title">大纲指定古诗文72篇</div>
-                        <div class="works-desc">
-                            为2020年高考考生设计。根据最新课程标准编排，
-                            另有现代文翻译，有效提升背诵效率。
-                        </div>
+        <div id="top-bar">
+            <img src="img/logo.png" alt="乐道至简工作室" id="logo">
+            <span id="title">乐道至简工作室</span>
+        </div>
+
+        <div id="content-wrapper">
+            <div id="content-view">
+                <!-- about us -->
+                <horizon-title title="关于我们"></horizon-title>
+                <div class="box">
+                    <div class="content">
+                        <p>乐道至简工作室，原名知恒图书编辑制作中心，
+                            创立于2014年12月，是一个由一群有想法、
+                            爱创作的学生组成的文字创作、文字排版、平面设计、视频制作团队。</p>
+                        <p>“知恒”是由工作室口号“知识即是永恒”简化而来的。
+                            自工作室成立以来，已经编辑和创作了大量作品。
+                            在2019年7月，会社还与其它机构达成合作，
+                            在众多领域交流学习，工作进展顺利。</p>
                     </div>
                 </div>
-                <br>
-                <!-- row 2 -->
-                <div id="our-works">
-                    <div class="box works-display">
-                        <div class="works-title">新闻联播片头集锦</div>
-                        <div class="works-desc">
-                            新闻联播片头合集，
-                            包括了1978年至今9版新闻联播片头，
-                            可称为史上最全最清晰最流畅片头合集。
+                <!-- 作品 -->
+                <horizon-title title="我们的作品"></horizon-title>
+                <!-- center the works -->
+                <div id="our-works-wrapper">
+                    <!-- show works list -->
+                    <!-- row 1 -->
+                    <div id="our-works">
+                        <!-- works -->
+
+                        <works-display title="《1517》系列" text="大型英语校园小说，
+                        含有真实故事与科幻风支线剧情的高难度阅读理解。"></works-display>
+
+                        <works-display title="大纲指定古诗文72篇" text="为2020年高考考生设计。根据最新课程标准编排，
+                        另有现代文翻译，有效提升背诵效率。"></works-display>
+                    </div>
+                    <br>
+                    <!-- row 2 -->
+                    <div id="our-works">
+                        <works-display title="新闻联播片头集锦" text="新闻联播片头合集，
+                        包括了1978年至今9版新闻联播片头，
+                        可称为史上最全最清晰最流畅片头合集。"></works-display>
+                        <works-display title="海报大全" text="收录了自 2018 年以来乐道至简工作室所设计并制作的各类海报"></works-display>
+                    </div>
+                    <br>
+                    <!-- row 3 -->
+                    <div id="our-works">
+                        <div class="image-box works-image">
+                            <div class="image-title">《Mining ship》</div>
+                            <img src="img/ship1.jpg">
+                            <div class="image-desc">
+                                计算机艺术作品<br>未来在其它星球的全自动货运飞船
+                            </div>
                         </div>
                     </div>
-                    <div class="box works-display">
-                        <div class="works-title">海报大全</div>
-                        <div class="works-desc">
-                            收录了自 2018 年以来乐道至简工作室所设计并制作的各类海报
+                    <!-- row 4 -->
+                    <div id="our-works">
+                        <div class="image-box works-image">
+                            <div class="image-title">《沙漏》</div>
+                            <img src="img/sand.png">
+                            <div class="image-desc">
+                                计算机艺术作品<br>一个沙漏和简单的场景
+                            </div>
                         </div>
                     </div>
+                    <!-- row 5 -->
+                    <div id="our-works">
+                        <div class="image-box works-image">
+                            <div class="image-title">《电子悬浮时钟》</div>
+                            <img src="img/clock.jpg">
+                            <div class="image-desc">
+                                利用磁悬浮技术的桌面悬浮时钟
+                            </div>
+                        </div>
+                    </div>
+                    <!-- row 6 -->
+                    <div id="our-works">
+                        <div class="image-box works-image">
+                            <div class="image-title">通用技术设计作品</div>
+                            <img src="img/chair.jpg">
+                            <div class="image-desc">
+                                只是一个简单的凳子
+                            </div>
+                        </div>
+                    </div>
+                    <br>
                 </div>
-                <br>
-                <!-- row 3 -->
-                <div id="our-works">
-                    <div class="image-box works-image">
-                        <div class="image-title">《Mining ship》</div>
-                        <img src="img/ship1.jpg">
-                        <div class="image-desc">
-                            计算机艺术作品<br>未来在其它星球的全自动货运飞船
-                        </div>
-                    </div>
-                </div>
-                <!-- row 4 -->
-                <div id="our-works">
-                    <div class="image-box works-image">
-                        <div class="image-title">《沙漏》</div>
-                        <img src="img/sand.png">
-                        <div class="image-desc">
-                            计算机艺术作品<br>一个沙漏和简单的场景
-                        </div>
-                    </div>
-                </div>
-                <!-- row 5 -->
-                <div id="our-works">
-                    <div class="image-box works-image">
-                        <div class="image-title">《电子悬浮时钟》</div>
-                        <img src="img/clock.jpg">
-                        <div class="image-desc">
-                            利用磁悬浮技术的桌面悬浮时钟
-                        </div>
-                    </div>
-                </div>
-                <!-- row 6 -->
-                <div id="our-works">
-                    <div class="image-box works-image">
-                        <div class="image-title">通用技术设计作品</div>
-                        <img src="img/chair.jpg">
-                        <div class="image-desc">
-                            只是一个简单的凳子
-                        </div>
-                    </div>
-                </div>
-                <br>
-            </div>
-            <!-- contact us -->
-            <!-- 联系我们
+                <!-- contact us -->
+                <!-- 联系我们
                 知恒图书编辑制作中心
                 Zhiheng Book Editing and Publishing Centre -->
-            <div class="center-title">联系我们</div>
-            <div class="box">
-                <div class="content">
-                    <p>知恒图书编辑制作中心</p>
-                    <p>Zhiheng Book Editing and Publishing Centre</p>
+                <horizon-title title="联系我们"></horizon-title>
+                <div class="box">
+                    <div class="content">
+                        <p>知恒图书编辑制作中心</p>
+                        <p>Zhiheng Book Editing and Publishing Centre</p>
+                    </div>
                 </div>
             </div>
         </div>
+
+        <div id="space"></div>
     </div>
 
-    <div id="space"></div>
+    <script>
+        Vue.component('horizon-title', {
+            props: ["title"],
+            template: `
+            <div class="center-title">{{title}}</div>`,
+        });
+
+        Vue.component('works-display', {
+            props: ["title", 'text'],
+            template: `
+            <div class="box works-display">
+                <div class="works-title">{{title}}</div>
+                <div class="works-desc">
+                    {{text}}
+                </div>
+            </div>
+            `,
+        });
+
+        const app = new Vue({
+            el: '#app'
+        })
+    </script>
 </body>
 
 </html>
