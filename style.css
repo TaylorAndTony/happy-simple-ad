@@ -1,9 +1,9 @@
 :root {
     --bg: #f7f4f0;
-    --box-bg: #fcf4e5;
-    --box-bg-shadow: #fad0bd;
+    --box-bg: #fffde7;
+    --box-bg-shadow: #ffe2d5;
     --dark-bg: #ffebe2;
-    --dark-bg2: #fad0bd;
+    --dark-bg2: #fae4da;
     --text: #545454;
     --title: #c287b9;
     /* background: var(--bg); */
@@ -12,8 +12,37 @@
 html {
     height: 99%;
     width: 99%;
-    background-image: url('./img/bg.png');
-    background-position: cover;
+    background: linear-gradient(135deg,
+            #ffebee,
+            #fce4ec,
+            #f3e5f5,
+            #fce4ec,
+            #f3e5f5,
+            #e8eaf6,
+            #e0f7fa,
+            #e0f2f1,
+            #f1f8e9,
+            #f9fbe7,
+            #fff3e0);
+    /* background-position: cover; */
+    background-size: 500%;
+    background-position-x: 0%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    animation: move-bg 20s ease-in-out infinite;
+}
+
+@keyframes move-bg {
+
+    0%,
+    100% {
+        background-position-x: 0%;
+    }
+
+    50% {
+        background-position-x: 100%;
+    }
+
 }
 
 /* top bar */
@@ -82,15 +111,20 @@ html {
     left: 50%;
     transform: translateX(-50%);
     text-align: center;
-    border-bottom: 3px solid var(--bg);
+    border-bottom: transparent;
     transition: all 0.5s ease;
     animation: title-bar 3s linear infinite;
 }
 
 @keyframes title-bar {
-    0%, 10%, 90%, 100% {
-        border-bottom: 3px solid var(--bg);
+
+    0%,
+    10%,
+    90%,
+    100% {
+        border-bottom: 3px solid transparent;
     }
+
     50% {
         border-bottom: 3px solid var(--title);
     }
@@ -129,7 +163,8 @@ html {
     margin-right: 10px;
 }
 
-.works-title, .image-title {
+.works-title,
+.image-title {
     font-size: 20px;
     font-weight: bold;
     color: var(--text);
